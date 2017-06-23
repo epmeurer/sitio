@@ -17,9 +17,10 @@ public class Spawner : MonoBehaviour
 
 	void Spawn ()
 	{
-		// Instantiate a random enemy.
-		int enemyIndex = Random.Range(0, enemies.Length);
-		Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
+        // Instantiate a random enemy.
+        //int enemyIndex = Random.Range(0, enemies.Length);
+        int enemyIndex = 0;
+        Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
 
 		// Play the spawning effect from all of the particle systems.
 		foreach(ParticleSystem p in GetComponentsInChildren<ParticleSystem>())
